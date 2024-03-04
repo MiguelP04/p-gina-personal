@@ -4,8 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Personal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/jpg" href="https://static.planetminecraft.com/files/resource_media/screenshot/1207/EARTHBIG_1500345_thumb.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+
+    <style>
+        .letter-page {
+            font-family: "Kode Mono", monospace;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+        }
+
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+            color: #0087ca;
+        }
+
+        .hover-underline-animation::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #0087ca;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .hover-underline-animation:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+    </style>
 </head>
-<body>
-    <h1>Mi primera página personal</h1>
+
+<body class="bg-sky-200 letter-page">
+    <nav class="bg-sky-100">
+        <div class="flex justify-between items-center max-w-screen-md m-auto">
+            <img class="h-12" src="https://cdn-teams-slug.flaticon.com/freepik.jpg" alt="">
+
+            <ul class="flex space-x-6">
+                <li>
+                    <a class="hover-underline-animation" href="">About</a>
+                </li>
+                <li>
+                    <a class="hover-underline-animation" href="">Projects</a>
+                </li>
+                <li>
+                    <a class="hover-underline-animation" href="">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="grid grid-cols-4">
+        <div class="col-span-1">
+
+        </div>
+        <div class="flex col-span-2 justify-center h-96 items-center">
+            <div class="bg-white h-80 w-80 flex justify-center items-start pt-10 rounded-sm">
+                <div>
+                    <div>
+                        <img class="rounded-full m-auto h-20" src="img/perfil.jpg" alt="">
+                    </div>
+                    <div class="mt-5">
+                        <p>My name is Miguel Petit</p>
+                    </div>
+                    <div>
+                        <ol class="list-disc pt-4 space-y-2">
+                            <li> <span class="text-red-600">Estudio en unefa</span></li>
+                            <li><span class="text-blue-600">Estudio programación</span></li>
+                            <li><span class="text-sky-700">Ando estudiando en coderhub</span></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-span-1">
+
+        </div>
+    </section>
 </body>
 </html>
